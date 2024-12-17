@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Прокат автомобилей</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="fleet.html">Автопарк</a></li>
+          <li><a href="services.html">Услуги</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="about.html">О нас</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Прокат автомобилей в Бишкеке</h1>
+        <p>Лучшие автомобили для вашего комфорта и путешествий.</p>
+        <a href="booking.html" class="btn">Забронировать сейчас</a>
+      </div>
+    </section>
+
+    <section id="fleet">
+      <h2>Наши автомобили</h2>
+      <div class="car-grid">
+        <div class="car-item">
+          <img
+            src="https://png.pngtree.com/thumb_back/fw800/background/20230722/pngtree-d-illustration-of-a-white-backgrounded-sports-car-in-vibrant-yellow-image_3764444.jpg"
+            alt="Car 1"
+          />
+          <h3>Модель 1</h3>
+          <p>Описание автомобиля</p>
+          <a href="car-details.html">Подробнее</a>
+        </div>
+        <div class="car-item">
+          <img
+            src="https://st5.depositphotos.com/46264048/72862/i/450/depositphotos_728623778-stock-photo-rendering-illustration-sport-car-isolated.jpg"
+            alt="Car 2"
+          />
+          <h3>Модель 2</h3>
+          <p>Описание автомобиля</p>
+          <a href="car-details.html">Подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <h2>Забронируйте автомобиль</h2>
+      <form id="booking-form">
+        <label for="pickup-date">Дата и время аренды:</label>
+        <input type="datetime-local" id="pickup-date" required />
+
+        <label for="return-date">Дата и время возврата:</label>
+        <input type="datetime-local" id="return-date" required />
+
+        <label for="car-model">Выберите модель:</label>
+        <select id="car-model">
+          <option value="model1">Модель 1</option>
+          <option value="model2">Модель 2</option>
+        </select>
+
+        <button type="submit" class="btn">Забронировать</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Прокат автомобилей. Все права защищены.</p>
+    </footer>
+  </body>
+</html>
