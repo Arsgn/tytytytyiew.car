@@ -1,8 +1,7 @@
-// Обработчик отправки формы бронирования
 document
   .getElementById("booking-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Предотвращаем отправку формы
+    event.preventDefault();
 
     const pickupDate = document.getElementById("pickup-date").value;
     const returnDate = document.getElementById("return-date").value;
@@ -18,7 +17,6 @@ document
     );
   });
 
-// Пример для плавных переходов на странице
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
