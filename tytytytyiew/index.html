@@ -6,6 +6,95 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Прокат автомобилей</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function showCarDetails(carId) {
+        const carDetails = {
+          model1: {
+            name: "Модель 1",
+            image:
+              "https://png.pngtree.com/thumb_back/fw800/background/20230722/pngtree-d-illustration-of-a-white-backgrounded-sports-car-in-vibrant-yellow-image_3764444.jpg",
+            description: "Спортивный автомобиль для любителей скорости.",
+            price: "1000 сом/день",
+            features: "Быстрая реакция, стильный дизайн, комфорт",
+          },
+          model2: {
+            name: "Модель 2",
+            image:
+              "https://st5.depositphotos.com/46264048/72862/i/450/depositphotos_728623778-stock-photo-rendering-illustration-sport-car-isolated.jpg",
+            description: "Элегантный седан для бизнес-класса.",
+            price: "800 сом/день",
+            features: "Шикарный салон, комфорт для водителя",
+          },
+          model3: {
+            name: "Модель 3",
+            image:
+              "https://img.freepik.com/premium-photo/image-white-car-isolated-white-background_373676-2227.jpg",
+            description: "Мощный внедорожник для путешествий.",
+            price: "1200 сом/день",
+            features: "Проходимость, комфорт в любых условиях",
+          },
+          model4: {
+            name: "Модель 4",
+            image:
+              "https://million-wallpapers.ru/wallpapers/5/32/513663917252788/belyj-avto-na-belom-fone.jpg",
+            description: "Легкий компактный автомобиль для города.",
+            price: "600 сом/день",
+            features: "Экономия топлива, компактность",
+          },
+          model5: {
+            name: "Модель 5",
+            image:
+              "https://img.freepik.com/free-photo/view-three-dimensional-car-model_23-2151138991.jpg",
+            description: "Элегантный спортивный седан.",
+            price: "900 сом/день",
+            features: "Комфорт, высокая скорость",
+          },
+          model6: {
+            name: "Модель 6",
+            image:
+              "https://bogatyr.club/uploads/posts/2023-06/thumbs/1687321752_bogatyr-club-p-krasivaya-belaya-mashina-foni-krasivo-16.jpg",
+            description: "Идеальный выбор для дальних поездок.",
+            price: "1100 сом/день",
+            features: "Удобство, стиль",
+          },
+          model7: {
+            name: "Модель 7",
+            image:
+              "https://flomaster.top/o/uploads/posts/2024-02/1708580829_flomaster-top-p-temno-zelenaya-mashina-krasivo-narisovanni-1.jpg",
+            description: "Смелая и стильная модель для тех, кто ценит дизайн.",
+            price: "950 сом/день",
+            features: "Стиль, уникальность",
+          },
+          model8: {
+            name: "Модель 8",
+            image:
+              "https://png.pngtree.com/thumb_back/fw800/background/20231016/pngtree-white-sport-car-in-studio-environment-image_13942691.jpg",
+            description: "Высокопроизводительный спортивный автомобиль.",
+            price: "1500 сом/день",
+            features: "Высокая скорость, комфорт",
+          },
+        };
+
+        const car = carDetails[carId];
+        document.getElementById("car-name").innerText = car.name;
+        document.getElementById("car-image").src = car.image;
+        document.getElementById("car-description").innerText = car.description;
+        document.getElementById("car-price").innerText = car.price;
+        document.getElementById("car-features").innerText = car.features;
+
+        // Отображаем секцию с деталями
+        document.getElementById("car-details-section").style.display = "block";
+      }
+
+      function handleBooking(event) {
+        event.preventDefault();
+        const pickupDate = document.getElementById("pickup-date").value;
+        const returnDate = document.getElementById("return-date").value;
+        const carModel = document.getElementById("car-model").value;
+
+        alert(`Вы забронировали ${carModel} с ${pickupDate} до ${returnDate}`);
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -38,7 +127,9 @@
           />
           <h3>Модель 1</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model1')"
+            >Подробнее</a
+          >
         </div>
         <div class="car-item">
           <img
@@ -47,9 +138,10 @@
           />
           <h3>Модель 2</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model2')"
+            >Подробнее</a
+          >
         </div>
-
         <div class="car-item">
           <img
             src="https://img.freepik.com/premium-photo/image-white-car-isolated-white-background_373676-2227.jpg"
@@ -57,7 +149,9 @@
           />
           <h3>Модель 3</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model3')"
+            >Подробнее</a
+          >
         </div>
         <div class="car-item">
           <img
@@ -66,9 +160,10 @@
           />
           <h3>Модель 4</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model4')"
+            >Подробнее</a
+          >
         </div>
-
         <div class="car-item">
           <img
             src="https://img.freepik.com/free-photo/view-three-dimensional-car-model_23-2151138991.jpg"
@@ -76,7 +171,9 @@
           />
           <h3>Модель 5</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model5')"
+            >Подробнее</a
+          >
         </div>
         <div class="car-item">
           <img
@@ -85,7 +182,9 @@
           />
           <h3>Модель 6</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model6')"
+            >Подробнее</a
+          >
         </div>
         <div class="car-item">
           <img
@@ -94,7 +193,9 @@
           />
           <h3>Модель 7</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model7')"
+            >Подробнее</a
+          >
         </div>
         <div class="car-item">
           <img
@@ -103,14 +204,28 @@
           />
           <h3>Модель 8</h3>
           <p>Описание автомобиля</p>
-          <a href="car-details.html">Подробнее</a>
+          <a href="javascript:void(0);" onclick="showCarDetails('model8')"
+            >Подробнее</a
+          >
         </div>
       </div>
     </section>
 
+    <!-- Секция с подробной информацией об автомобиле -->
+    <section id="car-details-section" style="display: none">
+      <h2 id="car-name">Выберите автомобиль</h2>
+      <img id="car-image" src="" alt="Car" />
+      <p id="car-description">Описание</p>
+      <p><strong>Цена:</strong> <span id="car-price">Цена</span></p>
+      <p>
+        <strong>Особенности:</strong> <span id="car-features">Особенности</span>
+      </p>
+      <a href="booking.html" class="btn">Забронировать</a>
+    </section>
+
     <section id="form">
       <h2>Забронируйте автомобиль</h2>
-      <form id="booking-form">
+      <form id="booking-form" onsubmit="handleBooking(event)">
         <label for="pickup-date">Дата и время аренды:</label>
         <input type="datetime-local" id="pickup-date" required />
 
